@@ -1,0 +1,3 @@
+{"id": "sample-1", "database": "chinook", "question": "How many tracks are longer than five minutes?", "reference_sql": "SELECT COUNT(*) FROM tracks WHERE Milliseconds > 300000"}
+{"id": "sample-2", "database": "chinook", "question": "Which five genres have the most tracks?", "reference_sql": "SELECT g.Name, COUNT(t.TrackId) AS n FROM genres g JOIN tracks t ON t.GenreId = g.GenreId GROUP BY g.Name ORDER BY n DESC LIMIT 5"}
+{"id": "sample-3", "database": "chinook", "question": "What is the total invoice value for customers in Germany?", "reference_sql": "SELECT SUM(i.Total) FROM invoices i JOIN customers c ON c.CustomerId = i.CustomerId WHERE c.Country = 'Germany'"}

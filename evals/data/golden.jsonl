@@ -1,0 +1,10 @@
+{"id": "golden-1", "database": "chinook", "question": "How many tracks are longer than five minutes?", "reference_sql": "SELECT COUNT(*) FROM tracks WHERE Milliseconds > 300000"}
+{"id": "golden-2", "database": "chinook", "question": "Which five genres have the most tracks?", "reference_sql": "SELECT g.Name, COUNT(t.TrackId) AS n FROM genres g JOIN tracks t ON t.GenreId = g.GenreId GROUP BY g.Name ORDER BY n DESC LIMIT 5"}
+{"id": "golden-3", "database": "chinook", "question": "What is the total invoice value for customers in Germany?", "reference_sql": "SELECT SUM(i.Total) FROM invoices i JOIN customers c ON c.CustomerId = i.CustomerId WHERE c.Country = 'Germany'"}
+{"id": "golden-4", "database": "chinook", "question": "List all artists in alphabetical order.", "reference_sql": "SELECT Name FROM artists ORDER BY Name"}
+{"id": "golden-5", "database": "chinook", "question": "How many customers are there from Brazil?", "reference_sql": "SELECT COUNT(*) FROM customers WHERE Country = 'Brazil'"}
+{"id": "golden-6", "database": "chinook", "question": "What is the average duration of a track in milliseconds?", "reference_sql": "SELECT AVG(Milliseconds) FROM tracks"}
+{"id": "golden-7", "database": "chinook", "question": "Which album has the most tracks?", "reference_sql": "SELECT a.Title, COUNT(t.TrackId) AS n FROM albums a JOIN tracks t ON t.AlbumId = a.AlbumId GROUP BY a.AlbumId ORDER BY n DESC LIMIT 1"}
+{"id": "golden-8", "database": "chinook", "question": "Find the names of all rock tracks.", "reference_sql": "SELECT t.Name FROM tracks t JOIN genres g ON g.GenreId = t.GenreId WHERE g.Name = 'Rock'"}
+{"id": "golden-9", "database": "chinook", "question": "What is the total number of invoices recorded?", "reference_sql": "SELECT COUNT(*) FROM invoices"}
+{"id": "golden-10", "database": "chinook", "question": "List all distinct countries where customers reside.", "reference_sql": "SELECT DISTINCT Country FROM customers ORDER BY Country"}

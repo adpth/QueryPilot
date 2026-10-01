@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "n": 3,
+    "execution_accuracy": 100.0,
+    "valid_sql_rate": 100.0,
+    "self_repair_rate": null,
+    "avg_tool_calls": 1.0,
+    "median_tool_calls": 1,
+    "latency_p50_ms": 1.0,
+    "latency_p95_ms": 5.8,
+    "tokens_in": 1224,
+    "tokens_out": 78,
+    "cost_per_query_usd": 7.7e-05,
+    "label": "default"
+  },
+  "records": [
+    {
+      "id": "sample-1",
+      "correct": true,
+      "sql_valid": true,
+      "repairs": 0,
+      "repaired_to_success": false,
+      "tool_calls": 1,
+      "latency_ms": 5.801541003165767,
+      "input_tokens": 436,
+      "output_tokens": 21
+    },
+    {
+      "id": "sample-2",
+      "correct": true,
+      "sql_valid": true,
+      "repairs": 0,
+      "repaired_to_success": false,
+      "tool_calls": 1,
+      "latency_ms": 1.0105000110343099,
+      "input_tokens": 368,
+      "output_tokens": 31
+    },
+    {
+      "id": "sample-3",
+      "correct": true,
+      "sql_valid": true,
+      "repairs": 0,
+      "repaired_to_success": false,
+      "tool_calls": 1,
+      "latency_ms": 0.8667499932926148,
+      "input_tokens": 420,
+      "output_tokens": 26
+    }
+  ]
+}
